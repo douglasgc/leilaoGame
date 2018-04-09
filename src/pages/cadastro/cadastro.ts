@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CadastroService } from './cadastro.service';
-
+import { AlertController } from 'ionic-angular';
 
 @Component({
 selector: 'page-cadastro',
@@ -65,7 +65,7 @@ export class CadastroPage {
 		])
 	});
 
-	constructor(public navCtrl: NavController, private cs:CadastroService) {
+	constructor(public navCtrl: NavController, private cs:CadastroService, public alertCtrl: AlertController) {
 
 	}
 
@@ -75,12 +75,21 @@ export class CadastroPage {
 		console.log(formdata)
 	}
 
+	showAlert(title:string, text:string) {
+		let alert = this.alertCtrl.create({
+		  title: title,
+		  subTitle: text,
+		  buttons: ['OK']
+		});
+		alert.present();
+	}
+
 	finalizar() {
 		console.log(this.form.value);
 		if (this.form.valid) {
 			this.cs.cadastro(this.form.value)
 			.subscribe( ( data:any ) => {
-				console.log(data);
+				this.showAlert('Sucesso!', 'Sua conta foi criada com sucesso!');
 			})
 		}
 	}
