@@ -24,7 +24,6 @@ $app-direction: ltr;
 
 
 
-
 // Named Color Variables
 // --------------------------------------------------
 // Named colors makes it easy to reuse colors on various components.
@@ -33,9 +32,29 @@ $app-direction: ltr;
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 
+$SIDEMENU_TOP: #f20f5b;
+$SIDEMENU_BOTTOM: #cd287d;
+
+$toolbar-background: #f20f5b;
+.toolbar-background-md {
+    background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
+    background: -o-linear-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
+    background: -moz-linear-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
+    background: linear-gradient(to left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
+    background-repeat: repeat-x;
+}
+
+.toolbar-background-ios{
+    background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
+    background: -o-linear-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
+    background: -moz-linear-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
+    background: linear-gradient(to left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
+    background-repeat: repeat-x;
+}
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
+  primary:    #E41968,
+  secondary:  #fff,
+  facebook:   #4267B2,
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222

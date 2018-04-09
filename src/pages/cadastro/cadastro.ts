@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CadastroService } from './cadastro.service';
 
+
 @Component({
 selector: 'page-cadastro',
 templateUrl: 'cadastro.html'
