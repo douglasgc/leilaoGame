@@ -8,6 +8,8 @@ import { CadastroPage } from '../pages/cadastro/cadastro';
 import { ListPage } from '../pages/list/list';
 import { BrMaskerModule } from 'brmasker-ionic-3';
 
+import { GamePage } from '../pages/game/game';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -16,6 +18,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     LoginPage,
     CadastroPage,
+    GamePage,
     ListPage
   ],
   imports: [
@@ -28,6 +31,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     CadastroPage,
     LoginPage,
+    GamePage,
     ListPage
   ],
   providers: [

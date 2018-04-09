@@ -48,7 +48,7 @@
 
   <ion-item>
     <ion-label color="primary" floating>CPF</ion-label>
-    <ion-input formControlName="cpf" clearInput></ion-input>
+    <ion-input [brmasker]="{mask:'000.000.000-00', len:14}"s formControlName="cpf" clearInput></ion-input>
     <!-- [textMask]="{mask: maskCpf}" -->
   </ion-item>
   <span class="error" *ngIf="form.controls.cpf?.errors?.required && form.controls.cpf.touched">

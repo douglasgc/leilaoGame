@@ -1,0 +1,42 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+    	<div style="padding: 15px; padding-top: 0px;">
+    	<button ion-button round full color="dark">
+      	Comprar Crédito
+      </button>
+      </div>
+
+      <button ion-item class="btn-menu">
+        - QUEM SOMOS
+      </button>
+      <button ion-item class="btn-menu">
+        - COMO FUNCIONA
+      </button>
+      <button ion-item class="btn-menu">
+        - TERMOS DE USO
+      </button>
+      <button ion-item class="btn-menu">
+        - REGRAS DO JOGO
+      </button>
+      <button ion-item class="btn-menu">
+        - FALE CONOSCO
+      </button>
+      <button ion-item class="btn-menu">
+        - DESENVOLVEDORES
+      </button>
+
+      <div style="padding: 20px 15px;">
+      <button ion-button round full color="secondary">
+      	SITE DO APP
+      </button>
+      </div>	
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav #content [root]="rootPage"></ion-nav>

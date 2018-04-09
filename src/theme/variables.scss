@@ -44,12 +44,60 @@ $toolbar-background: #f20f5b;
     background-repeat: repeat-x;
 }
 
+ion-menu .content {
+    background: linear-gradient(to right, #f20f5b 0%, #cd287d 100%)!important;
+    background-repeat: repeat-x;
+    ion-list {
+    	margin-top: 30px;
+    }
+    .list {
+    	background:transparent;
+    	.btn-menu {
+    		background: transparent;
+    		border: 0px;
+    		font-size: 16px;
+    		font-weight: bold!important;
+    		color: #fff;
+    	}
+    	.item-inner {
+    		border:0px;
+    	}
+    }
+
+nav#menuresponsivo #rede-sociais {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+nav#menuresponsivo #rede-sociais a {
+    margin: 0 10px;
+    color: #FFF;
+    font-family: 'Plutoregular';
+    font-size: 14px;
+}
+nav#menuresponsivo #rede-sociais a .fa {
+    font-size: 18px;
+    margin-right: 5px;
+}
+}
+
 .toolbar-background-ios{
     background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
     background: -o-linear-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
     background: -moz-linear-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
     background: linear-gradient(to left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
     background-repeat: repeat-x;
+}
+.toolbar-background {
+    background: transparent!important;
+    text-align: center;
+    font-weight: bold;
+}
+.toolbar-title-md {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 $colors: (
   primary:    #E41968,
