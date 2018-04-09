@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { CadastroService } from './cadastro.service';
 
 @Component({
 selector: 'page-cadastro',
@@ -56,7 +57,7 @@ export class CadastroPage {
 			])
 	});
 
-	constructor(public navCtrl: NavController) {
+	constructor(public navCtrl: NavController, private cs:CadastroService) {
 
 	}
 
@@ -69,7 +70,10 @@ export class CadastroPage {
 	finalizar() {
 		console.log(this.form.value);
 		if (this.form.valid) {
-			
+			this.cs.cadastro(this.form.value)
+			.subscribe( ( data:any ) => {
+				console.log(data);
+			})
 		}
 	}
 }

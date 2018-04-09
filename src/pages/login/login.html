@@ -7,13 +7,18 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding [formGroup]="form">
 
-  Junior sama<br>
+  <ion-item>
+    <ion-label color="primary" floating>E-mail</ion-label>
+    <ion-input formControlName="email"></ion-input>
+  </ion-item>
 
-  Aqui deve ter uma pagina de  login, com campo de  usuário e senha através do formControl e talz.
-  <br>
-  Leia sempre muito bem a documentação do ionic para fazer a task corretamente.
+  <ion-item>
+    <ion-label color="primary" floating>Senha</ion-label>
+    <ion-input formControlName="senha" type="password"></ion-input>
+  </ion-item>
 
+  <button ion-button full (click)="login()">Entrar</button>
 
 </ion-content>
