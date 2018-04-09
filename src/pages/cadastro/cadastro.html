@@ -8,9 +8,10 @@
 </ion-header>
 
 <ion-content padding [formGroup]="form">
+  
   <ion-item>
     <ion-label color="primary" floating>Nome Completo</ion-label>
-    <ion-input formControlName="nome" clearInput></ion-input>
+    <ion-input formControlName="nome"></ion-input>
     
   </ion-item>
   <span class="error" *ngIf="(form.controls.nome?.errors?.required) && form.controls.nome.touched==true">
@@ -19,7 +20,7 @@
 
   <ion-item>
     <ion-label color="primary" floating>E-mail</ion-label>
-    <ion-input formControlName="email" clearInput></ion-input>
+    <ion-input formControlName="email"></ion-input>
   </ion-item>
   <span class="error" *ngIf="form.controls.email?.errors?.required && form.controls.email.touched">
       <ion-label class="error-text"> E-mail é Obrigatório </ion-label>
@@ -30,7 +31,7 @@
   
   <ion-item>
     <ion-label color="primary" floating>Data de Nascimento</ion-label>
-    <ion-input formControlName="datanasc" clearInput></ion-input>
+    <ion-input formControlName="datanasc"></ion-input>
     <!-- [textMask]="{mask: maskData}" -->
   </ion-item>
   <span class="error" *ngIf="form.controls.datanasc?.errors?.required && form.controls.datanasc.touched">
@@ -39,7 +40,7 @@
 
   <ion-item>
     <ion-label color="primary" floating>Celular</ion-label>
-    <ion-input formControlName="celular" clearInput></ion-input>
+    <ion-input formControlName="celular"></ion-input>
     <!-- [textMask]="{mask: maskCel}" -->
   </ion-item>
   <span class="error" *ngIf="form.controls.celular?.errors?.required && form.controls.celular.touched">
@@ -57,7 +58,7 @@
 
   <ion-item>
     <ion-label color="primary" floating>CEP</ion-label>
-    <ion-input formControlName="cep" clearInput></ion-input>
+    <ion-input formControlName="cep"></ion-input>
     <!-- [textMask]="{mask: maskCep}" -->
   </ion-item>
   <span class="error" *ngIf="form.controls.cep?.errors?.required && form.controls.cep.touched">
@@ -66,7 +67,7 @@
 
   <ion-item>
     <ion-label color="primary" floating>Logradouro</ion-label>
-    <ion-input formControlName="logradouro" clearInput></ion-input>
+    <ion-input formControlName="logradouro"></ion-input>
   </ion-item>
   <span class="error" *ngIf="form.controls.logradouro?.errors?.required && form.controls.logradouro.touched">
       <ion-label class="error-text"> Logradouro é Obrigatório </ion-label>
@@ -74,7 +75,7 @@
 
   <ion-item>
     <ion-label color="primary" floating>Nº</ion-label>
-    <ion-input formControlName="numero" clearInput></ion-input>
+    <ion-input formControlName="numero"></ion-input>
   </ion-item>
   <span class="error" *ngIf="form.controls.numero?.errors?.required && form.controls.numero.touched">
       <ion-label class="error-text"> Nº é Obrigatório </ion-label>
@@ -82,7 +83,7 @@
 
   <ion-item>
     <ion-label color="primary" floating>Complemento</ion-label>
-    <ion-input formControlName="complemento" clearInput></ion-input>
+    <ion-input formControlName="complemento"></ion-input>
   </ion-item>
   <span class="error" *ngIf="form.controls.complemento?.errors?.required && form.controls.complemento.touched">
       <ion-label class="error-text"> Complemento é Obrigatório </ion-label>
@@ -90,7 +91,7 @@
 
   <ion-item>
     <ion-label color="primary" floating>Bairro</ion-label>
-    <ion-input formControlName="bairro" clearInput></ion-input>
+    <ion-input formControlName="bairro"></ion-input>
   </ion-item>
   <span class="error" *ngIf="form.controls.bairro?.errors?.required && form.controls.bairro.touched">
       <ion-label class="error-text"> Bairro é Obrigatório </ion-label>
@@ -98,7 +99,7 @@
 
   <ion-item>
     <ion-label color="primary" floating>Cidade</ion-label>
-    <ion-input formControlName="cidade" clearInput></ion-input>
+    <ion-input formControlName="cidade"></ion-input>
   </ion-item>
   <span class="error" *ngIf="form.controls.cidade?.errors?.required && form.controls.cidade.touched">
       <ion-label class="error-text"> Cidade é Obrigatório </ion-label>
@@ -106,7 +107,7 @@
 
   <ion-item>
     <ion-label color="primary" floating>UF</ion-label>
-    <ion-input formControlName="estado" clearInput></ion-input>
+    <ion-input formControlName="estado"></ion-input>
   </ion-item>
   <span class="error" *ngIf="form.controls.estado?.errors?.required && form.controls.estado.touched">
       <ion-label class="error-text"> UF é Obrigatório </ion-label>
