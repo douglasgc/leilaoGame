@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { CadastroPage } from '../pages/cadastro/cadastro';
 import { ListPage } from '../pages/list/list';
+import { BrMaskerModule } from 'brmasker-ionic-3';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,6 +20,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
+    BrMaskerModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],

@@ -8,26 +8,23 @@
 </ion-header>
 
 <ion-content padding [formGroup]="form">
-{{ form.controls.nome?.errors?.required }}
-{{ !form.controls.nome.touched }}
-{{ form.controls.nome?.errors?.required && !form.controls.nome.touched }}
   <ion-item>
     <ion-label color="primary" floating>Nome Completo</ion-label>
     <ion-input formControlName="nome" clearInput></ion-input>
     
   </ion-item>
-  <span class="error" [hidden]="form.controls.nome?.errors?.required && !form.controls.nome.touched">
-      <ion-label class="error-text"> Nome é Obrigatório </ion-label>
+  <span class="error" *ngIf="(form.controls.nome?.errors?.required) && form.controls.nome.touched==true">
+      <ion-label class="error-text"> Seu nome é obrigatório </ion-label>
   </span>
 
   <ion-item>
     <ion-label color="primary" floating>E-mail</ion-label>
     <ion-input formControlName="email" clearInput></ion-input>
   </ion-item>
-  <span class="error" [hidden]="form.controls.email?.errors?.required && !form.controls.email.touched">
+  <span class="error" *ngIf="form.controls.email?.errors?.required && form.controls.email.touched">
       <ion-label class="error-text"> E-mail é Obrigatório </ion-label>
   </span>
-  <span class="error" [hidden]="form.controls.email?.errors?.required && !form.controls.email.touched">
+  <span class="error" *ngIf="form.controls.email?.errors?.email && form.controls.email.touched">
       <ion-label class="error-text"> E-mail Inválido </ion-label>
   </span>
   
@@ -36,7 +33,7 @@
     <ion-input formControlName="datanasc" clearInput></ion-input>
     <!-- [textMask]="{mask: maskData}" -->
   </ion-item>
-  <span class="error" [hidden]="form.controls.datanasc?.errors?.required && !form.controls.datanasc.touched">
+  <span class="error" *ngIf="form.controls.datanasc?.errors?.required && form.controls.datanasc.touched">
       <ion-label class="error-text"> Data de Nascimento é Obrigatório </ion-label>
   </span>
 
@@ -45,7 +42,7 @@
     <ion-input formControlName="celular" clearInput></ion-input>
     <!-- [textMask]="{mask: maskCel}" -->
   </ion-item>
-  <span class="error" [hidden]="form.controls.celular?.errors?.required && !form.controls.celular.touched">
+  <span class="error" *ngIf="form.controls.celular?.errors?.required && form.controls.celular.touched">
       <ion-label class="error-text"> Celular é Obrigatório </ion-label>
   </span>
 
@@ -54,7 +51,7 @@
     <ion-input formControlName="cpf" clearInput></ion-input>
     <!-- [textMask]="{mask: maskCpf}" -->
   </ion-item>
-  <span class="error" [hidden]="form.controls.cpf?.errors?.required && !form.controls.cpf.touched">
+  <span class="error" *ngIf="form.controls.cpf?.errors?.required && form.controls.cpf.touched">
       <ion-label class="error-text"> CPF é Obrigatório </ion-label>
   </span>
 
@@ -63,7 +60,7 @@
     <ion-input formControlName="cep" clearInput></ion-input>
     <!-- [textMask]="{mask: maskCep}" -->
   </ion-item>
-  <span class="error" [hidden]="form.controls.cep?.errors?.required && !form.controls.cep.touched">
+  <span class="error" *ngIf="form.controls.cep?.errors?.required && form.controls.cep.touched">
       <ion-label class="error-text"> CEP é Obrigatório </ion-label>
   </span>
 
@@ -71,7 +68,7 @@
     <ion-label color="primary" floating>Logradouro</ion-label>
     <ion-input formControlName="logradouro" clearInput></ion-input>
   </ion-item>
-  <span class="error" [hidden]="form.controls.logradouro?.errors?.required && !form.controls.logradouro.touched">
+  <span class="error" *ngIf="form.controls.logradouro?.errors?.required && form.controls.logradouro.touched">
       <ion-label class="error-text"> Logradouro é Obrigatório </ion-label>
   </span>
 
@@ -79,7 +76,7 @@
     <ion-label color="primary" floating>Nº</ion-label>
     <ion-input formControlName="numero" clearInput></ion-input>
   </ion-item>
-  <span class="error" [hidden]="form.controls.numero?.errors?.required && !form.controls.numero.touched">
+  <span class="error" *ngIf="form.controls.numero?.errors?.required && form.controls.numero.touched">
       <ion-label class="error-text"> Nº é Obrigatório </ion-label>
   </span>
 
@@ -87,7 +84,7 @@
     <ion-label color="primary" floating>Complemento</ion-label>
     <ion-input formControlName="complemento" clearInput></ion-input>
   </ion-item>
-  <span class="error" [hidden]="form.controls.complemento?.errors?.required && !form.controls.complemento.touched">
+  <span class="error" *ngIf="form.controls.complemento?.errors?.required && form.controls.complemento.touched">
       <ion-label class="error-text"> Complemento é Obrigatório </ion-label>
   </span>
 
@@ -95,7 +92,7 @@
     <ion-label color="primary" floating>Bairro</ion-label>
     <ion-input formControlName="bairro" clearInput></ion-input>
   </ion-item>
-  <span class="error" [hidden]="form.controls.bairro?.errors?.required && !form.controls.bairro.touched">
+  <span class="error" *ngIf="form.controls.bairro?.errors?.required && form.controls.bairro.touched">
       <ion-label class="error-text"> Bairro é Obrigatório </ion-label>
   </span>
 
@@ -103,7 +100,7 @@
     <ion-label color="primary" floating>Cidade</ion-label>
     <ion-input formControlName="cidade" clearInput></ion-input>
   </ion-item>
-  <span class="error" [hidden]="form.controls.cidade?.errors?.required && !form.controls.cidade.touched">
+  <span class="error" *ngIf="form.controls.cidade?.errors?.required && form.controls.cidade.touched">
       <ion-label class="error-text"> Cidade é Obrigatório </ion-label>
   </span>
 
@@ -111,10 +108,10 @@
     <ion-label color="primary" floating>UF</ion-label>
     <ion-input formControlName="estado" clearInput></ion-input>
   </ion-item>
-  <span class="error" [hidden]="form.controls.estado?.errors?.required && !form.controls.estado.touched">
+  <span class="error" *ngIf="form.controls.estado?.errors?.required && form.controls.estado.touched">
       <ion-label class="error-text"> UF é Obrigatório </ion-label>
   </span>
-
-  <button ion-button full color="secondary" (click)="finalizar()" [hidden]="!form.valid">Concluir</button>
+<br>
+  <button ion-button full round color="primary" (click)="finalizar()" [disabled]="!form.valid">Concluir</button>
 
 </ion-content>

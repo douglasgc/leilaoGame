@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
+
 @Component({
 selector: 'page-cadastro',
 templateUrl: 'cadastro.html'
