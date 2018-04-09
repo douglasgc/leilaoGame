@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <div style="text-align: center;">
+      <img style="width: 52px; margin-top:3px;" src="/assets/img/logo_n.png" alt="">
+      </div>
+    </ion-title>
+     <ion-buttons end>
+      <button color="secondary" outline round ion-button>
+        R$ 50,00
+        <ion-icon name="usd"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="list-game-page">
+  <div style="display: inline-block;background: #f3f3f3;">
+  <h2 class="list-title">Próximos Jogos</h2>
+  <h4>O jogos terão início no dia seguinte do preenchimento total das vagas.</h4>
+  </div>
+  <ion-list>
+  <ion-item  *ngFor="let item of list">
+    <ion-thumbnail item-start>
+      <img [src]="'http://fastclickapp.com.br/admin/upload/games/' + item.Game.picture">
+    </ion-thumbnail>
+    <h2 style="font-weight: bold">{{item.Game.title}}</h2>
+    <h5>R$ {{item.Game.minvalor}}</h5>
+    <p>Garanta sua Vaga</p>
+    <button [navParams]="{id:item.Game.id}" [navPush]="playerPage" ion-button color="dark" round item-end>Jogar Agora</button>
+  </ion-item>
+</ion-list>
+</ion-content>

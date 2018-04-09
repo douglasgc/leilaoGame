@@ -17,6 +17,6 @@ export class ListPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  	
   }
-
 }

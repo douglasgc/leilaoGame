@@ -33,6 +33,7 @@
     "ionic2-mask-directive": "^1.0.8",
     "ionic3-input-mask": "^0.20.5",
     "ionicons": "3.0.0",
+    "moment": "^2.22.0",
     "rxjs": "5.5.8",
     "sw-toolbox": "3.6.0",
     "zone.js": "0.8.20"

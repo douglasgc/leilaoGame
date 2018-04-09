@@ -10,6 +10,14 @@ import { ListPage } from '../pages/list/list';
 import { BrMaskerModule } from 'brmasker-ionic-3';
 
 import { GamePage } from '../pages/game/game';
+import { PlayerPage } from '../pages/game/player/player';
+import { PlayerService } from '../pages/game/player/player.service';
+
+
+import { ListGamePage } from '../pages/game/list/list';
+import { ListService } from '../pages/game/list/list.service';
+
+
 import { LoginService } from '../pages/login/login.service';
 import { CadastroService } from '../pages/cadastro/cadastro.service';
 
@@ -22,7 +30,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     CadastroPage,
     GamePage,
-    ListPage
+    ListGamePage,
+    ListPage,
+    PlayerPage
   ],
   imports: [
     BrowserModule,
@@ -36,11 +46,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CadastroPage,
     LoginPage,
     GamePage,
-    ListPage
+    ListGamePage,
+    ListPage,
+    PlayerPage
   ],
   providers: [
     StatusBar,
     CadastroService,
+    PlayerService,
+    ListService,
     LoginService,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
