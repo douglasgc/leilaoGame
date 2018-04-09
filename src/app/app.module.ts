@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { CadastroPage } from '../pages/cadastro/cadastro';
+import { PagamentoPage } from '../pages/pagamento/pagamento';
 import { ListPage } from '../pages/list/list';
 import { BrMaskerModule } from 'brmasker-ionic-3';
 
@@ -20,6 +21,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     LoginPage,
+    PagamentoPage,
     CadastroPage,
     GamePage,
     ListPage
@@ -35,6 +37,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     CadastroPage,
     LoginPage,
+    PagamentoPage,
     GamePage,
     ListPage
   ],

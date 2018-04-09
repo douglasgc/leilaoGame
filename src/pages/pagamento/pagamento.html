@@ -1,0 +1,97 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Pagamento</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+
+    <form [formGroup]="form" (ngSubmit)="finalizar()">
+  
+        <ion-item>
+            <ion-label color="primary" floating>Endereço</ion-label>
+            <ion-input formControlName="endereco"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+            <ion-label color="primary" floating>Número</ion-label>
+            <ion-input formControlName="numero"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+            <ion-label color="primary" floating>Complemento</ion-label>
+            <ion-input formControlName="complemento"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+            <ion-label color="primary" floating>Bairro</ion-label>
+            <ion-input formControlName="bairro"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+            <ion-label color="primary" floating>Cidade</ion-label>
+            <ion-input formControlName="cidade"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Estado</ion-label>
+            <ion-select formControlName="estado">
+                <ion-option value="Acre">Acre</ion-option>
+                <ion-option value="Alagoas">Alagoas</ion-option>
+                <ion-option value="Amazonas">Amazonas</ion-option>
+                <ion-option value="Amapá">Amapá</ion-option>
+                <ion-option value="Bahia">Bahia</ion-option>
+                <ion-option value="Ceará">Ceará</ion-option>
+                <ion-option value="Distrito Federal">Distrito Federal</ion-option>
+                <ion-option value="Espírito Santo">Espírito Santo</ion-option>
+                <ion-option value="Goiás">Goiás</ion-option>
+                <ion-option value="Maranhão">Maranhão</ion-option>
+                <ion-option value="Minas Gerais">Minas Gerais</ion-option>
+                <ion-option value="Mato Grosso do Sul">Mato Grosso do Sul</ion-option>
+                <ion-option value="Mato Grosso">Mato Grosso</ion-option>
+                <ion-option value="Pará">Pará</ion-option>
+                <ion-option value="Paraíba">Paraíba</ion-option>
+                <ion-option value="Pernambuco">Pernambuco</ion-option>
+                <ion-option value="Piauí">Piauí</ion-option>
+                <ion-option value="Paraná">Paraná</ion-option>
+                <ion-option value="Rio de Janeiro">Rio de Janeiro</ion-option>
+                <ion-option value="Rio Grande do Norte">Rio Grande do Norte</ion-option>
+                <ion-option value="Rondônia">Rondônia</ion-option>
+                <ion-option value="Roraima">Roraima</ion-option>
+                <ion-option value="Rio Grande do Sul">Rio Grande do Sul</ion-option>
+                <ion-option value="Santa Catarina">Santa Catarina</ion-option>
+                <ion-option value="Sergipe">Sergipe</ion-option>
+                <ion-option value="São Paulo">São Paulo</ion-option>
+                <ion-option value="Tocantins">Tocantins</ion-option>
+            </ion-select>
+        </ion-item>
+    
+        <ion-item>
+            <ion-label color="primary" floating>CEP</ion-label>
+            <ion-input formControlName="cep"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+            <ion-label color="primary" floating>Celular</ion-label>
+            <ion-input formControlName="celular"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+            <ion-label color="primary" floating>Número do Cartão</ion-label>
+            <ion-input formControlName="nCartao"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+            <ion-label color="primary" floating>Nome (Como esta escríto no cartão)</ion-label>
+            <ion-input formControlName="nomeCartao"></ion-input>
+        </ion-item>
+
+        <button ion-button full type="submit">Entrar</button>
+
+    </form>
+  
+  </ion-content>
+  
