@@ -31,7 +31,7 @@
   
   <ion-item>
     <ion-label color="primary" floating>Data de Nascimento</ion-label>
-    <ion-input formControlName="datanasc"></ion-input>
+    <ion-input [brmasker]="{mask:'00/00/00', len:8}" formControlName="datanasc"></ion-input>
     <!-- [textMask]="{mask: maskData}" -->
   </ion-item>
   <span class="error" *ngIf="form.controls.datanasc?.errors?.required && form.controls.datanasc.touched">
@@ -40,7 +40,7 @@
 
   <ion-item>
     <ion-label color="primary" floating>Celular</ion-label>
-    <ion-input formControlName="celular"></ion-input>
+    <ion-input [brmasker]="{mask:'(00)00000-0000', len:14}" formControlName="celular"></ion-input>
     <!-- [textMask]="{mask: maskCel}" -->
   </ion-item>
   <span class="error" *ngIf="form.controls.celular?.errors?.required && form.controls.celular.touched">
@@ -49,7 +49,7 @@
 
   <ion-item>
     <ion-label color="primary" floating>CPF</ion-label>
-    <ion-input [brmasker]="{mask:'000.000.000-00', len:14}"s formControlName="cpf" clearInput></ion-input>
+    <ion-input [brmasker]="{mask:'000.000.000-00', len:14}" formControlName="cpf" clearInput></ion-input>
     <!-- [textMask]="{mask: maskCpf}" -->
   </ion-item>
   <span class="error" *ngIf="form.controls.cpf?.errors?.required && form.controls.cpf.touched">
@@ -58,7 +58,7 @@
 
   <ion-item>
     <ion-label color="primary" floating>CEP</ion-label>
-    <ion-input formControlName="cep"></ion-input>
+    <ion-input [brmasker]="{mask:'00000-000', len:9}" formControlName="cep"></ion-input>
     <!-- [textMask]="{mask: maskCep}" -->
   </ion-item>
   <span class="error" *ngIf="form.controls.cep?.errors?.required && form.controls.cep.touched">
@@ -111,6 +111,22 @@
   </ion-item>
   <span class="error" *ngIf="form.controls.estado?.errors?.required && form.controls.estado.touched">
       <ion-label class="error-text"> UF é Obrigatório </ion-label>
+  </span>
+
+  <ion-item>
+    <ion-label color="primary" floating>Senha</ion-label>
+    <ion-input formControlName="senha"></ion-input>
+  </ion-item>
+  <span class="error" *ngIf="form.controls.senha?.errors?.required && form.controls.senha.touched">
+      <ion-label class="error-text"> Senha é Obrigatório </ion-label>
+  </span>
+
+  <ion-item>
+    <ion-label>Aceito os termos</ion-label>
+    <ion-checkbox formControlName="termos"></ion-checkbox>
+  </ion-item>
+  <span class="error" *ngIf="form.controls.termos?.errors?.required && form.controls.termos.touched">
+      <ion-label class="error-text"> Termos é Obrigatório </ion-label>
   </span>
 <br>
   <button ion-button full round color="primary" (click)="finalizar()" [disabled]="!form.valid">Concluir</button>

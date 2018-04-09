@@ -24,19 +24,19 @@ export class CadastroPage {
 			]),
 		datanasc : new FormControl('', [
 			Validators.required,
-			Validators.minLength(this.maskData.length)
+			Validators.minLength(8)
 			]),
 		celular : new FormControl('', [
 			Validators.required,
-			Validators.minLength(this.maskCel.length)
+			Validators.minLength(14)
 			]),
 		cpf : new FormControl('', [
 			Validators.required,
-			Validators.minLength(this.maskCpf.length)
+			Validators.minLength(14)
 			]),
 		cep : new FormControl('', [
 			Validators.required,
-			Validators.minLength(this.maskCep.length)
+			Validators.minLength(9)
 			]),
 		logradouro : new FormControl('', [
 			Validators.required
@@ -55,7 +55,14 @@ export class CadastroPage {
 			]),
 		estado : new FormControl('', [
 			Validators.required
-			])
+			]),
+		senha : new FormControl('', [
+			Validators.required,
+			Validators.minLength(6)
+		]),
+		termos : new FormControl('false', [
+			Validators.required
+		])
 	});
 
 	constructor(public navCtrl: NavController, private cs:CadastroService) {
