@@ -1,6 +1,6 @@
 {
   "name": "leilaoApp",
-  "app_id": "",
+  "app_id": "a4f6b2e2",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
