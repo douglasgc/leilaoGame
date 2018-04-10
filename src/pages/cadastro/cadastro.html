@@ -55,7 +55,10 @@
   <span class="error" *ngIf="form.controls.cpf?.errors?.required && form.controls.cpf.touched">
       <ion-label class="error-text"> CPF é Obrigatório </ion-label>
   </span>
-
+<ion-item>
+    <ion-label color="primary" floating>Indicação(e-mail):</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
   <ion-item>
     <ion-label color="primary" floating>CEP</ion-label>
     <ion-input [brmasker]="{mask:'00000-000', len:9}" formControlName="cep"></ion-input>

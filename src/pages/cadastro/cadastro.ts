@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CadastroService } from './cadastro.service';
-import { AlertController } from 'ionic-angular';
+import { LoadingController,AlertController } from 'ionic-angular';
 
 @Component({
 selector: 'page-cadastro',
 templateUrl: 'cadastro.html'
 })
 export class CadastroPage {
-
+	loader:any;
 	maskData:any = [/[0-9]/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/];
 	maskCel:any = ['(', /[0-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, ' - ', /\d/, /\d/, /\d/, /\d/];
 	maskCpf:any = [/[0-9]/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '-', /\d/, /\d/];
@@ -65,7 +65,7 @@ export class CadastroPage {
 		])
 	});
 
-	constructor(public navCtrl: NavController, private cs:CadastroService, public alertCtrl: AlertController) {
+	constructor(public navCtrl: NavController, private cs:CadastroService,public loadingCtrl:LoadingController, public alertCtrl: AlertController) {
 
 	}
 
@@ -73,6 +73,13 @@ export class CadastroPage {
 		console.log(this.form);1
 		let formdata:FormData = new FormData();
 		console.log(formdata)
+	}
+
+	createLoading () {
+		this.loader = this.loadingCtrl.create({
+			content: "Carregando"
+		});
+		this.loader.present();
 	}
 
 	showAlert(title:string, text:string) {
@@ -85,10 +92,12 @@ export class CadastroPage {
 	}
 
 	finalizar() {
+		this.createLoading();
 		console.log(this.form.value);
 		if (this.form.valid) {
 			this.cs.cadastro(this.form.value)
 			.subscribe( ( data:any ) => {
+				this.loader.dismissAll();
 				this.showAlert('Sucesso!', 'Sua conta foi criada com sucesso!');
 			})
 		}
