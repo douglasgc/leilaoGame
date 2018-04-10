@@ -15,10 +15,12 @@ export class PagamentoPage {
         bairro : new FormControl('', [Validators.required]),
         cidade : new FormControl('', [Validators.required]),
         estado : new FormControl('', [Validators.required]),
-        cep : new FormControl('', [Validators.required]),
-        celular : new FormControl('', [Validators.required]),
-        nCartao : new FormControl('', [Validators.required]),
-        nomeCartao : new FormControl('', [Validators.required])
+        cep : new FormControl('', [Validators.required, Validators.minLength(9)]),
+        celular : new FormControl('', [Validators.required, Validators.minLength(14)]),
+        nCartao : new FormControl('', [Validators.required, Validators.minLength(19)]),
+        nomeCartao : new FormControl('', [Validators.required]),
+        dataVenc : new FormControl('', [Validators.required, Validators.minLength(5)]),
+        codigo : new FormControl('', [Validators.required, Validators.minLength(3)])
     });
 
     constructor() { }
@@ -26,7 +28,7 @@ export class PagamentoPage {
     ngOnInit() { console.log(this.form) }
 
     finalizar() {
-        console.log(this.form.value);
+        console.log(this.form);
     }
 
 }
