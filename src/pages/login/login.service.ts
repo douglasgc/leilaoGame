@@ -9,7 +9,7 @@ export class LoginService {
     constructor(private http:Http) { }
     
     login(data){
-        return this.http.post('http://192.168.25.195:8080/api/players/login', data)
+        return this.http.post('http://fastclickapp.com.br/api/players/login', data)
         .map(data => data.json());
     }
 }
