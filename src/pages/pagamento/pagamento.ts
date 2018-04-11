@@ -42,7 +42,7 @@ export class PagamentoPage {
 
     finalizar() {
         if(this.form.valid) {
-            this.createAlert("Preencha os campos corretamente.");
+             // this.createAlert("Preencha os campos corretamente.");
         }
         this.pag.getTimer(this.form.value)
         .subscribe(() => {

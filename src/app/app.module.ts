@@ -6,11 +6,16 @@ import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { CadastroPage } from '../pages/cadastro/cadastro';
+
+import { PlanosPage } from '../pages/planos/planos';
+
 import { PagamentoPage } from '../pages/pagamento/pagamento';
 import { PagamentoService } from '../pages/pagamento/pagamento.service';
 
 import { ListPage } from '../pages/list/list';
 import { BrMaskerModule } from 'brmasker-ionic-3';
+
+import { InstitucionalPage } from '../pages/institucional/institucional';
 
 import { GamePage } from '../pages/game/game';
 import { PlayerPage } from '../pages/game/player/player';
@@ -36,7 +41,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     GamePage,
     ListGamePage,
     ListPage,
-    PlayerPage
+    PlayerPage,
+    PlanosPage,
+    InstitucionalPage
   ],
   imports: [
     BrowserModule,
@@ -53,7 +60,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     GamePage,
     ListGamePage,
     ListPage,
-    PlayerPage
+    PlayerPage,
+    PlanosPage,
+    InstitucionalPage
   ],
   providers: [
     StatusBar,

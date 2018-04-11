@@ -27,12 +27,7 @@ export class LoginPage {
       this.ls.login(this.form.value)
       .subscribe( ( data:any ) => {
         this.loader.dismissAll();
-
-        if(this.form.value.email=='caio@caionorder.com'){
-          this.navCtrl.push(GamePage);
-          return;
-        }
-        if ( data.statu ) {
+        if ( data.status ) {
           console.log(data);
 
           localStorage.setItem('authResponse', null);
@@ -46,7 +41,7 @@ export class LoginPage {
         }else{
           this.showAlert('Ops!', 'E-mail ou Senha inválidos!');
         }
-      });
+      }, (alertf) =>{alert(alertf)} );
     }
   }
 

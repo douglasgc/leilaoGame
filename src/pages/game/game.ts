@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { PagamentoPage } from '../pagamento/pagamento';
+import { PlanosPage } from '../planos/planos';
+
+import { InstitucionalPage } from '../institucional/institucional';
+
 
 import { ListGamePage } from './list/list';
 
@@ -12,7 +15,8 @@ export class GamePage {
 
 
 	listGame = ListGamePage;
-  	pagamento:any = PagamentoPage;
+	institucionalPage = InstitucionalPage;
+  	planos:any = PlanosPage;
   
   constructor(public navCtrl: NavController) {
 

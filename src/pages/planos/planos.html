@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Planos</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding style="background: #e4377a;">
+    <br>
+    <h3 style="padding: 5px; text-align: center;color: #fff;">
+        Selecione um plano:
+    </h3>
+    <button [navPush]="ppage" style="height: 62px;margin-top: 20px;background: #4e4e4e;position: relative;transform: scale(0.93);" full color="dark" round ion-button icon-left>
+        <ion-icon style="position: absolute; left: 32px;font-size: 32px;" name="ios-basket"></ion-icon>
+        Plano de <br> <b style="font-size: 22px;">R$ 30 </b>
+    </button>
+    <button [navPush]="ppage" style="height: 62px;margin-top: 20px;background: #414141;position: relative;transform: scale(1);" full color="dark" round ion-button icon-left>
+        <ion-icon style="position: absolute; left: 32px;font-size: 32px;" name="ios-basket"></ion-icon>
+        Plano de <br> <b style="font-size: 22px;">R$ 50 </b>
+    </button>
+    <button [navPush]="ppage" style="height: 62px;margin-top: 20px;position: relative;transform: scale(0.96);" full color="dark" round ion-button icon-left>
+        <ion-icon style="position: absolute; left: 32px;font-size: 32px;" name="ios-basket"></ion-icon>
+        Plano de <br> <b style="font-size: 22px;">R$ 80 </b>
+    </button>
+  </ion-content>
+  
