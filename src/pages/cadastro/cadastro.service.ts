@@ -8,7 +8,7 @@ export class CadastroService {
     constructor(private http:Http) { }
 
     cadastro(data){
-        return this.http.post('http://fastclickapp.com.br/api/players/add', data)
+        return this.http.post('http://fastclickapp.com.br/admin/players/add', data)
         .map(data => data.json());
     }
     
