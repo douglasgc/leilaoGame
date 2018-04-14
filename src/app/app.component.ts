@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, NavController, Platform,ModalController} from 'ionic-angular';
+import { Nav, Platform,ModalController} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -16,13 +16,13 @@ export class MyApp {
 
   rootPage: any;
 
-  constructor(public navCtrl: NavController,public modalCtrl: ModalController, public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public modalCtrl: ModalController, public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     let modal = this.modalCtrl.create(ModalPage);
 
     modal.onDidDismiss(data => {
-      this.navCtrl.setRoot(GamePage);
+      this.rootPage = GamePage;
     });
     modal.present();
 
