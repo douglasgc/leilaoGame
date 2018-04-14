@@ -1,0 +1,47 @@
+<ion-header class="background-transparent">
+	<div style="height: 210px; background: url(/assets/img/bg-hme.png); background-size:cover;background-position: center;">
+		<ion-navbar style="background: transparent!important;">
+
+		</ion-navbar>
+
+		<div class="header-ranking" style="padding: 0px 30px;">
+			<span>
+				<ion-icon name="ios-checkmark-circle-outline"></ion-icon>
+			</span>
+			<h1>
+				Você foi classificado em 1º lugar
+			</h1>
+		</div>
+	</div>
+</ion-header>
+<ion-content padding>
+	<div style="padding: 10px 10px;">
+	<h4>Confira o Ranking:</h4>
+	</div>
+	<div class="table">
+ <ion-row class="header">
+    <ion-col col-2 style="text-align: center;">
+      <strong style="">Nº</strong>
+    </ion-col>
+    <ion-col>
+      <strong>Nome</strong>
+    </ion-col>
+    <ion-col col-2>
+      <strong>Cliques</strong>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="col">
+    <ion-col col-2>
+      <span class="circle">1</span>
+    </ion-col>
+    <ion-col>
+      Você
+    </ion-col>
+    <ion-col col-2>
+      <strong>{{clicks}}</strong>
+    </ion-col>
+  </ion-row>
+  </div>
+
+</ion-content>
