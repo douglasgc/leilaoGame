@@ -1,15 +1,84 @@
 .card-aguarde {
-		.icon-bolinha {
-			width: 60px;
-			height: 60px;
-			border-radius: 30px;
-    		background: linear-gradient(to right, #f20f5b 0%, #cd287d 100%)!important;
-    		margin:0 auto;
-    		line-height: 66px;
-    		font-size: 34px;
-    		color: #fff;
-		}
-		padding:45px;
+	.icon-bolinha {
+		width: 60px;
+		height: 60px;
+		border-radius: 30px;
+		background: linear-gradient(to right, #f20f5b 0%, #cd287d 100%)!important;
+		margin:0 auto;
+		line-height: 66px;
+		font-size: 34px;
+		color: #fff;
+	}
+	padding:45px;
+	text-align:center;
+	color:#444;
+}
+.background-transparent{
+	.toolbar-background-md {
+		background:transparent!important;
+	}
+	color:#fff;
+}
+
+.header-ranking {
+	span {
+		    width: 46px;
+    height: 46px;
+    display: block;
+    line-height: 54px;
+    text-align: center;
+    border-radius: 30px;
+    background: #fff;
+    color: #3fd60e;
+    font-size: 32px;
+	}
+}
+.header.row {
+    background: #f9f9f9!important;
+    padding: 8px;
+}
+.row.col {
+	.circle {
+		background:#efefef;
+		width: 30px;
+		height: 30px;
 		text-align:center;
-		color:#444;
+		line-height:30px;
+		border-radius:30px;
+		margin:-8px auto;
+		display:block;
+
+	}
+    padding: 12px;
+}
+.table {
+	border:1px solid #efefef;
+	.row {
+		background: #fefefe;
+		border-bottom:1px solid #efefef;
+	}
+	.row:nth-child(even){
+		background: #fff;
+	}
+	.row:nth-child(2){
+		.circle {
+			background: #ffd76a !important;
+			transform: scale(1.2);
+			font-weight:bold;
+		}
+	}
+	.row:nth-child(3){
+		.circle {
+			transform: scale(1.12);
+			font-weight:bold;
+			background: #ced9df !important;
+		}
+	}
+	.row:nth-child(4){
+		.circle {
+			transform: scale(1.06);
+			font-weight:bold;
+			background: #eb9347 !important;
+		}
+	}
 }

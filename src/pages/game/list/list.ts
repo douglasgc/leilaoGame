@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoadingController } from 'ionic-angular';
 
+import { ListPage } from '../../list/list';
+
 import { PlayerPage } from '../player/player';
 
 import { ListService } from './list.service';
@@ -28,6 +30,15 @@ export class ListGamePage {
 			loader.dismissAll()
 			this.list = data.ativos;
 		});
+	}
+	openGame(id:number) {
+		if(localStorage.userID) {
+			this.navCtrl.push(PlayerPage, {id:id});
+		}else {
+			alert("Você precisa realizar o login antes.");
+			this.navCtrl.setRoot(ListPage);
+		}
+
 	}
 }
 

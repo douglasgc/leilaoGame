@@ -4,6 +4,7 @@ import { LoadingController } from 'ionic-angular';
 import { timer } from 'rxjs/observable/timer';
 import { interval } from 'rxjs/observable/interval';
 import { PlayerService } from './player.service';
+import { RankingPage } from './../../ranking/ranking';
 import { AlertController } from 'ionic-angular';
 import moment from 'moment';
 
@@ -25,7 +26,7 @@ export class PlayerPage {
 	intS:any;
 	timer$:any;
 
-	constructor(public navParams: NavParams, public alertCtrl:AlertController,  public loadingCtrl:LoadingController, public ps:PlayerService) {
+	constructor(public navCtrl:NavController,public navParams: NavParams, public alertCtrl:AlertController,  public loadingCtrl:LoadingController, public ps:PlayerService) {
 		
 		this.start();
 	}
@@ -35,13 +36,10 @@ export class PlayerPage {
 		this.ps
 		.getGame(this.navParams.get('id'))
 		.subscribe((game:any) => {
-
 			this.loader.dismissAll();
 			this.game =game.Game;
 
-			console.log(moment().diff(moment("2018-04-24 14:30:00")));
-
-			let time_start = 14000; 
+			let time_start = 10000; 
 			this.time_start=(time_start-(-1*1000))/1000;
 			this.int = interval(1000)
 			.subscribe((i) => {
@@ -58,6 +56,7 @@ export class PlayerPage {
 	ngOnDestroy() {
 		if(this.int){return;}
 		this.int.unsubscribe();
+		this.intS.unsubscribe();
 		if(this.timer$){return;}
 		this.timer$.unsubscribe();
 		
@@ -69,12 +68,11 @@ export class PlayerPage {
 		this.loader.present();
 	}
 	createAlert() {
-		let alert = this.alertCtrl.create({
-			title: 'Você foi classificado!',
-			subTitle: 'Por favor aguarde a próxima etapa.',
-			buttons: ['Ok, vou aguardar.']
-		});
-		alert.present();
+		this.ngOnDestroy();
+		this.navCtrl.push(RankingPage, {clicks:this.clicks});
+
+		this.time_game=0;
+		this.time_percent =0;
 	}
 	startGame () {
 				// Inicia o Jogo
@@ -97,7 +95,7 @@ export class PlayerPage {
 
 			endGame () {
 
-		
+
 		// Finaliza o Jogo
 		this.game.status = "1";
 		timer(10000)
@@ -106,9 +104,6 @@ export class PlayerPage {
 			this.createAlert();
 
 
-			this.clicks = 0;
-			this.time_game=0;
-			this.time_percent =0;
 			this.start();
 		})
 		this.createLoading();

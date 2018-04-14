@@ -9,6 +9,9 @@
       </div>
     </ion-title>
      <ion-buttons end>
+        <button ion-button menuToggle>
+        <ion-icon name="ios-usd"></ion-icon>
+      </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
@@ -26,7 +29,7 @@
     <h2 style="font-weight: bold">{{item.Game.title}}</h2>
     <h5>R$ {{item.Game.minvalor}}</h5>
     <p>Garanta sua Vaga</p>
-    <button [navParams]="{id:item.Game.id}" [navPush]="playerPage" ion-button color="dark" round item-end>Jogar Agora</button>
+    <button (click)="openGame(item.Game.id)" ion-button color="dark" round item-end>Jogar Agora</button>
   </ion-item>
 </ion-list>
 </ion-content>

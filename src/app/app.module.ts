@@ -8,6 +8,9 @@ import { LoginPage } from '../pages/login/login';
 import { CadastroPage } from '../pages/cadastro/cadastro';
 
 import { PlanosPage } from '../pages/planos/planos';
+import { ModalPage } from '../pages/modal/modal';
+
+import { RankingPage } from '../pages/ranking/ranking';
 
 import { PagamentoPage } from '../pages/pagamento/pagamento';
 import { PagamentoService } from '../pages/pagamento/pagamento.service';
@@ -42,6 +45,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListGamePage,
     ListPage,
     PlayerPage,
+    ModalPage,
+    RankingPage,
     PlanosPage,
     InstitucionalPage
   ],
@@ -61,6 +66,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListGamePage,
     ListPage,
     PlayerPage,
+    ModalPage,
+    RankingPage,
     PlanosPage,
     InstitucionalPage
   ],

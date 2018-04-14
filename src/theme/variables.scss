@@ -32,10 +32,10 @@ $app-direction: ltr;
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 
-$SIDEMENU_TOP: #f20f5b;
-$SIDEMENU_BOTTOM: #cd287d;
+$SIDEMENU_TOP: #AC0B3E;
+$SIDEMENU_BOTTOM: #E90556;
 
-$toolbar-background: #f20f5b;
+$toolbar-background: #AC0B3E;
 .toolbar-background-md {
     background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
     background: -o-linear-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
@@ -58,7 +58,7 @@ ion-menu {
 }
 ion-menu .content {
 
-    background: linear-gradient(to right, #f20f5b 0%, #cd287d 100%)!important;
+    background: linear-gradient(to right, #AC0B3E, 1%, #E90556 100%)!important;
     background-repeat: repeat-x;
     ion-list {
     	margin-top: 30px;
@@ -107,7 +107,7 @@ $colors: (
   secondary:  #fff,
   facebook:   #4267B2,
   danger:     #f53d3d,
-  light:      #f4f4f4,
+  light:      #fff,
   dark:       #222
 );
 
