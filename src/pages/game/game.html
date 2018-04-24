@@ -6,37 +6,59 @@
   </ion-header>
   <ion-content>
     <ion-list>
-    	<div style="padding: 15px; padding-top: 0px;">
-    	<button [navPush]="planos" ion-button round full color="dark">
-      	Comprar Crédito
-      </button>
-      </div>
+      <ion-item class="btn-menu">
+        <ion-thumbnail style="max-width: 40px!important;min-width: 40px;border-radius: 20px; background:#fff;max-height: 40px;min-height: 40px;" item-start>
 
-      <button [navPush]="institucionalPage" [navParams]="{id:6}" ion-item class="btn-menu">
-        - QUEM SOMOS
-      </button>
-      <button [navPush]="institucionalPage" [navParams]="{id:6}" ion-item class="btn-menu">
-        - COMO FUNCIONA
-      </button>
-      <button [navPush]="institucionalPage" [navParams]="{id:6}" ion-item class="btn-menu">
-        - TERMOS DE USO
-      </button>
-      <button [navPush]="institucionalPage" [navParams]="{id:6}" ion-item class="btn-menu">
-        - REGRAS DO JOGO
-      </button>
-      <button [navPush]="institucionalPage" [navParams]="{id:6}" ion-item class="btn-menu">
-        - FALE CONOSCO
-      </button>
-      <button [navPush]="institucionalPage" [navParams]="{id:6}" ion-item class="btn-menu">
-        - DESENVOLVEDORES
-      </button>
+        </ion-thumbnail>
 
-      <div style="padding: 20px 15px;">
+        <div>Olá, Douglas Gabriel</div>
+      </ion-item>
+
+    </ion-list>
+    <div style="padding: 15px; padding-top: 0px; padding-bottom: 0px;">
+    	
+      <button [navPush]="planos" ion-button round full color="dark">
+        <ion-icon name="usd"></ion-icon>
+        Comprar Crédito
+      </button>
+    </div>
+    <ion-list>
+
+    <button [navPush]="institucionalPage" [navParams]="{id:6}" icon-left ion-item class="btn-menu">
+      <ion-icon name="home"></ion-icon> QUEM SOMOS
+    </button>
+    <button [navPush]="institucionalPage" [navParams]="{id:6}" icon-left ion-item class="btn-menu">
+      <ion-icon name="help"></ion-icon> COMO FUNCIONA
+    </button>
+    <button [navPush]="institucionalPage" [navParams]="{id:6}" icon-left ion-item class="btn-menu">
+      <ion-icon name="document"></ion-icon> TERMOS DE USO
+    </button>
+    <button [navPush]="institucionalPage" [navParams]="{id:6}" icon-left ion-item class="btn-menu">
+      <ion-icon name="book"></ion-icon> REGRAS DO JOGO
+    </button>
+    <button [navPush]="institucionalPage" [navParams]="{id:6}" icon-left ion-item class="btn-menu">
+      <ion-icon name="call"></ion-icon> FALE CONOSCO
+    </button>
+    <button [navPush]="institucionalPage" [navParams]="{id:6}" icon-left ion-item class="btn-menu">
+      <ion-icon name="code-working"></ion-icon> DESENVOLVEDORES
+    </button>
+    <button icon-left ion-item class="btn-menu">
+      <ion-icon name="videocam"></ion-icon> VÍDEO TUTORIAL
+    </button>
+
+
+    <div style="padding: 10px 15px;">
       <button ion-button round full color="secondary">
       	Entrar no Site
       </button>
-      </div>	
-    </ion-list>
-  </ion-content>
+    </div>	
+    <button [navPush]="institucionalPage" [navParams]="{id:6}" icon-left ion-item class="btn-menu">
+      <ion-icon name="logo-instagram"></ion-icon> @fastclick
+    </button>
+    <button icon-left ion-item class="btn-menu">
+      <ion-icon name="logo-facebook"></ion-icon> /fastclick
+    </button>
+  </ion-list>
+</ion-content>
 </ion-menu>
 <ion-nav #content [root]="listGame"></ion-nav>

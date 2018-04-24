@@ -37,11 +37,9 @@ $SIDEMENU_BOTTOM: #E90556;
 
 $toolbar-background: #AC0B3E;
 .toolbar-background-md {
-    background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
-    background: -o-linear-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
-    background: -moz-linear-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
-    background: linear-gradient(to left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
-    background-repeat: repeat-x;
+    background-image: url(../../assets/img/bg-hme.png)!important;
+    background-size:cover!important;
+    background-position:0px 480px !important;
 }
 ion-menu {
     
@@ -58,7 +56,8 @@ ion-menu {
 }
 ion-menu .content {
 
-    background: linear-gradient(to right, #AC0B3E, 1%, #E90556 100%)!important;
+    background: url(../../assets/img/bg-hme.png);
+    background-size:cover;
     background-repeat: repeat-x;
     ion-list {
     	margin-top: 30px;
@@ -103,7 +102,7 @@ nav#menuresponsivo #rede-sociais a .fa {
     background-repeat: repeat-x;
 }
 $colors: (
-  primary:    #E41968,
+  primary:    #e11941,
   secondary:  #fff,
   facebook:   #4267B2,
   danger:     #f53d3d,
@@ -117,7 +116,9 @@ $colors: (
 // iOS only Sass variables can go here
 
 
-
+$font-family-md-base: "Plutoregular";
+$font-family-ios-base: "Plutoregular";
+$font-family-wp-base: "Plutoregular";
 
 // App Material Design Variables
 // --------------------------------------------------

@@ -40,5 +40,8 @@ export class ListGamePage {
 		}
 
 	}
+	regra () {
+		alert("Este é um jogo teste.");
+	}
 }
 

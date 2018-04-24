@@ -32,19 +32,19 @@ export class PlayerPage {
 	}
 	start () {
 		this.createLoading();
-		
 		this.ps
 		.getGame(this.navParams.get('id'))
 		.subscribe((game:any) => {
+
 			this.loader.dismissAll();
 			this.game =game.Game;
 
-			let time_start = 10000; 
+			let time_start = 60000; 
 			this.time_start=(time_start-(-1*1000))/1000;
 			this.int = interval(1000)
 			.subscribe((i) => {
 				
-
+				
 				if(i==time_start/1000) {this.int.unsubscribe();return;}
 				this.time_start=(time_start-(i*1000))/1000;
 			});
@@ -54,6 +54,7 @@ export class PlayerPage {
 		})
 	}
 	ngOnDestroy() {
+		console.log('EXIT');
 		if(this.int){return;}
 		this.int.unsubscribe();
 		this.intS.unsubscribe();
@@ -102,7 +103,7 @@ export class PlayerPage {
 		.subscribe((data) => {
 			this.loader.dismissAll();
 			this.createAlert();
-
+			this.ngOnDestroy();
 
 			this.start();
 		})
