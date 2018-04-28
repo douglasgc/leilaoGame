@@ -4,9 +4,6 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      <div >
-      <img style="width: 52px; margin-top:3px;" src="/assets/img/logo_n.png" alt="">
-      </div>
     </ion-title>
      <ion-buttons end>
       <div style="color: #fff; font-size: 16px;">
@@ -30,7 +27,7 @@
     <h5 style="padding-top: 4px;"><b>R$ {{item.Game.minvalor}}</b></h5>
     <p *ngIf="item.Game.id==7"><b>Etapa 1</b> - R$ 1,20</p>
     <div item-end>
-      <button style="margin: 0px 10px;" (click)="openGame(item.Game.id)" color="primary" item-end ion-button round>Jogar Agora</button>
+      <button style="margin: 0px 10px;font-size: 13px;font-weight: bold;" (click)="openGame(item.Game.id)" color="primary" item-end ion-button round>Jogar Agora</button>
       <br>
       <button style="float: right;margin: 15px 15px;" (click)="regra()" color="primary" item-end ion-button round>REGRAS</button>
     </div>

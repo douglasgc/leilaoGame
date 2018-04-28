@@ -68,6 +68,10 @@ export class PlayerPage {
 		});
 		this.loader.present();
 	}
+	openClassfication () {
+		this.navCtrl.push(RankingPage, {clicks:null});
+
+	}
 	createAlert() {
 		this.ngOnDestroy();
 		this.navCtrl.push(RankingPage, {clicks:this.clicks});

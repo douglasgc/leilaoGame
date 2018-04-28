@@ -23,10 +23,15 @@
 					<ion-thumbnail item-start>
 						<img [src]="'http://fastclickapp.com.br/admin/upload/games/' + game?.picture">
 					</ion-thumbnail>
-					<h2 style="color: #666;">Créditos para participar</h2>
-					<h3 style="font-size: 18px; color:#e11941; font-weight: bold;">R$ {{game?.minvalor}}</h3>
+					<h2 style="color: #666; padding-bottom: 20px;">Créditos para participar</h2>
+					<h3 style="font-size: 22px; color:#e11941; font-weight: bold;">R$ {{game?.minvalor}}
+						<button (click)="openClassfication()" style="margin: 0px 0px;float: right;color: #fff;" color="primary" ion-button round>Ver Classificação</button>
+					</h3>
 					<hr>
+
 					<p style="font-size: 22px; font-weight: bold; color:#e11941;">Etapa {{game?.etapaatual}}/{{game?.etapas}}</p>
+      
+					
 				</ion-item>
 			</ion-list>
 		</ion-card-content>

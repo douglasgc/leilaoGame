@@ -1,47 +1,86 @@
 <ion-header class="background-transparent">
-	<div style="height: 210px; background: url(/assets/img/bg-hme.png); background-size:cover;background-position: center;">
+	<div style="height: 170px; background: url(/assets/img/bg-hme.png); background-size:cover;background-position: center;">
 		<ion-navbar style="background: transparent!important;">
-
 		</ion-navbar>
 
-		<div class="header-ranking" style="padding: 0px 30px;">
-			<span>
-				<ion-icon name="ios-checkmark-circle-outline"></ion-icon>
-			</span>
+		<div *ngIf="clicks" class="header-ranking" style="padding: 0px 20px;">
 			<h1>
-				Você foi classificado em 1º lugar
+				Você foi classificado em <b>1º lugar</b>
 			</h1>
 		</div>
+    <div *ngIf="!clicks" class="header-ranking" style="padding: 0px 20px;">
+      <h1>
+        Confira a classificação da última etapa
+      </h1>
+    </div>
 	</div>
 </ion-header>
-<ion-content padding>
+<ion-content class="ranking">
 	<div style="padding: 10px 10px;">
 	<h4>Confira o Ranking:</h4>
 	</div>
-	<div class="table">
- <ion-row class="header">
-    <ion-col col-2 style="text-align: center;">
-      <strong style="">Nº</strong>
-    </ion-col>
-    <ion-col>
-      <strong>Nome</strong>
-    </ion-col>
-    <ion-col col-2>
-      <strong>Cliques</strong>
-    </ion-col>
-  </ion-row>
+  <ion-list class="ranking-list">
+    <ion-item>
+      <h2 item-start style="font-size: 24px;">1º </h2>
+      <ion-avatar item-start>
+        <span>JE</span>
+      </ion-avatar>
+      <h2 style="font-size:15px;">Jorge Eduardo</h2>
+      <p style="font-size: 13px;">Cliques: 123</p>
+      <button icon-left round ion-button item-end>
+      <ion-icon name="logo-facebook"></ion-icon>
+      Perfil do Facebook
+    </button>
+    </ion-item>
+    <ion-item>
+      <h2 item-start style="font-size: 24px;">2º </h2>
+      <ion-avatar style="background: url(https://scontent.fbfh1-2.fna.fbcdn.net/v/t1.0-9/27858345_10211543776410999_1539497760131682680_n.jpg?_nc_cat=0&oh=3692a5d56ce0da0426c804f45f5ed87a&oe=5B55C1D9); background-size: cover;" item-start>
+      </ion-avatar>
+      <h2 style="font-size:15px;">Caio Norder</h2>
+      <p style="font-size: 13px;">Cliques: 87</p>
+      <button icon-left round ion-button item-end>
+      <ion-icon name="logo-facebook"></ion-icon>
+      Perfil do Facebook
+    </button>
+    </ion-item>
+    <ion-item>
+      <h2 item-start style="font-size: 24px;">3º </h2>
+      <ion-avatar style="background: url(https://scontent.fbfh1-2.fna.fbcdn.net/v/t31.0-8/20729078_1556885667706439_231851558754113945_o.jpg?_nc_cat=0&oh=7272f15f5e46d0c892ed9408b1471ae8&oe=5B924C23); background-size: cover;" item-start>
+      </ion-avatar>
+      <h2 style="font-size:15px;">Douglas Gabriel</h2>
+      <p style="font-size: 13px;">Cliques: 85</p>
+      <button icon-left round ion-button item-end>
+      <ion-icon name="logo-facebook"></ion-icon>
+      Perfil do Facebook
+    </button>
+    </ion-item>
+    <ion-item>
+      <h2 item-start style="font-size: 24px;">4º </h2>
+      <ion-avatar item-start>
+        <span>LC</span>
+      </ion-avatar>
+      <h2 style="font-size:15px;">Leandro</h2>
+      <p style="font-size: 13px;">Cliques: 77</p>
+      <button icon-left round ion-button item-end>
+      <ion-icon name="logo-facebook"></ion-icon>
+      Perfil do Facebook
+    </button>
+    </ion-item>
+    <ion-item>
+      <h2 item-start style="font-size: 24px;">5º </h2>
+      <ion-avatar item-start>
+        <span>BG</span>
+      </ion-avatar>
+      <h2 style="font-size:15px;">Bia Giacomelli</h2>
+      <p style="font-size: 13px;">Cliques: 66</p>
+      <button icon-left round ion-button item-end>
+      <ion-icon name="logo-facebook"></ion-icon>
+      Perfil do Facebook
+    </button>
+    </ion-item>
+</ion-list>
 
-  <ion-row class="col">
-    <ion-col col-2>
-      <span class="circle">1</span>
-    </ion-col>
-    <ion-col>
-      Você
-    </ion-col>
-    <ion-col col-2>
-      <strong>{{clicks}}</strong>
-    </ion-col>
-  </ion-row>
-  </div>
+<p style="padding: 15px;">Este Ranking é fake para demonstração no jogo teste(Leandro)</p>
+
 
 </ion-content>

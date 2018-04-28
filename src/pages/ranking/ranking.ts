@@ -7,7 +7,9 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class RankingPage {
 	clicks:number;
+	view:boolean;
 	constructor(public navParams: NavParams) {
+		this.view = this.navParams.get('view');
 		this.clicks = this.navParams.get('clicks');
 	}
 }
