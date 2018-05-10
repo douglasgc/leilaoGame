@@ -23,6 +23,9 @@ import { ViewController } from 'ionic-angular';
   <video autoplay width="100%" controls>
     <source src="/assets/video/video.mp4" type="video/mp4">
   </video>
+   <div style="text-align:center;" padding>
+  <button (click)="dismiss()" ion-button small round color="secondary">Fechar</button>
+  </div>
 
   </ion-slide >
   </ion-slides>
