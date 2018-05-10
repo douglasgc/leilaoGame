@@ -16,4 +16,9 @@ export class PlayerService {
 		.map(data => data.json());
 
 	}
+	joinRoom (data:{game_id:number,player_id:number}) {
+		return this.http.post('http://fastclickapp.com.br/admin/api/ranks/add/',data)
+		.map(data => data.json());
+
+	}
 }

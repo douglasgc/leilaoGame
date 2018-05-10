@@ -43,10 +43,10 @@ export class ModalPage {
     if(localStorage.openVideo){
       return;
     }
-    setInterval(()=>{
+    setTimeout(()=>{
     let aud:any = document.querySelector("video");
     console.log(aud);
-    aud.onended = () => this.endVideo();
+    aud.onended = () => {this.endVideo()};
     },5000)
   }
   endVideo() {

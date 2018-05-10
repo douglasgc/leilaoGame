@@ -24,12 +24,12 @@
 						<img [src]="'http://fastclickapp.com.br/admin/upload/games/' + game?.picture">
 					</ion-thumbnail>
 					<h2 style="color: #666; padding-bottom: 20px;">Créditos para participar</h2>
-					<h3 style="font-size: 22px; color:#e11941; font-weight: bold;">R$ {{game?.minvalor}}
-						<button (click)="openClassfication()" style="margin: 0px 0px;float: right;color: #fff;" color="primary" ion-button round>Ver Classificação</button>
+					<h3 style="font-size: 22px; color:#e11941; font-weight: bold;">R$ {{parseInt(game?.minvalor) + (parseInt(game?.minvalor)*(etapa-1)*0.1)}}
+						<button *ngIf="game?.status==3" (click)="openClassfication()" style="margin: 0px 0px;float: right;color: #fff;" color="primary" ion-button round>Ver Classificação</button>
 					</h3>
 					<hr>
 
-					<p style="font-size: 22px; font-weight: bold; color:#e11941;">Etapa {{game?.etapaatual}}/{{game?.etapas}}</p>
+					<p style="font-size: 22px; font-weight: bold; color:#e11941;">Etapa {{etapa}}/{{game?.etapas}}</p>
       
 					
 				</ion-item>
@@ -37,8 +37,27 @@
 		</ion-card-content>
 
 	</ion-card>
+	<div padding *ngIf="game?.status==1 && join==false" style="text-align: center;">
+		<h2 style="color: #333;"><b>Deseja entrar na partida?</b></h2>
+		<button (click)="joinRoom()" round ion-button>
+			Entrar na partida
+		</button>
+		<p>O jogo inicia quando um número suficiente de participantes entrarem.</p>
 
-	<div *ngIf="game?.status=='1'" class="card-aguarde" style="padding: 20px 40px;">
+	</div>
+	<div padding *ngIf="game?.status==1 && join!=false" style="text-align: center;">
+		<h2 style="color: #333;"><b>Você já está inscrito</b></h2>
+		<h3> Por favor aguarde o jogo começar. </h3>
+
+	</div>
+	<div *ngIf="game?.status==3">
+	<div *ngIf="game?.statusGame=='1'">
+		<h3 style="padding: 30px; text-align: center;">
+			A próxima etapa começa<br>
+			<b>{{nextStepTimeText}}</b>
+		</h3>
+	</div>
+	<div *ngIf="game?.statusGame=='5'" class="card-aguarde" style="padding: 20px 40px;">
 		<div class="icon-bolinha">
 			<ion-icon name="clock"></ion-icon>
 		</div>
@@ -48,7 +67,7 @@
 		</h3>
 		<h3>{{time_start}}s</h3>
 	</div>
-	<div *ngIf="game?.status=='2'" class="card-player" style="padding: 10px 20px;">
+	<div *ngIf="game?.statusGame=='2'" class="card-player" style="padding: 10px 20px;">
 		<h4 style="text-align: center;">
 			Total de cliques: {{clicks}}
 		</h4>
@@ -78,9 +97,7 @@
 		line-height: 26px;
 		">{{time_game}}s</p>
 	</div>
+</div>	
 </div>
-	<p style="padding: 0px 20px; text-align: center; color: #888;">A cada etapa os 100 usuários mais lentos no carregamento da barra serão desclassificados. </p>
-
-
 </div>
 </ion-content>

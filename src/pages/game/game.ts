@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { PlanosPage } from '../planos/planos';
-
 import { InstitucionalPage } from '../institucional/institucional';
-
-
 import { ListGamePage } from './list/list';
 
 @Component({
@@ -17,9 +14,20 @@ export class GamePage {
 	listGame = ListGamePage;
 	institucionalPage = InstitucionalPage;
   	planos:any = PlanosPage;
+  	localStorage = localStorage;
   
   constructor(public navCtrl: NavController) {
 
+  }
+  reOpenVideo() {
+  	localStorage.removeItem('openVideo');
+  	location.reload();
+  }
+  substr() {
+  	return localStorage.nome.substr(0, 1);
+  }
+  openLink (link:string) {
+  	window.open(link, '_system', 'location=yes');
   }
 
 }

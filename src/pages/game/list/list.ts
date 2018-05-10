@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,AlertController } from 'ionic-angular';
 import { LoadingController } from 'ionic-angular';
 
 import { ListPage } from '../../list/list';
@@ -16,9 +16,9 @@ export class ListGamePage {
 
 	list:Array<any>;
 	playerPage = PlayerPage;
-	
+	localStorage = localStorage;
 
-	constructor(public navCtrl: NavController, public lService:ListService, public loadingCtrl:LoadingController) {
+	constructor(public alertCtrl:AlertController,public navCtrl: NavController, public lService:ListService, public loadingCtrl:LoadingController) {
 		let loader = this.loadingCtrl.create({
 	      content: "Carregando"
 	    });
@@ -30,6 +30,12 @@ export class ListGamePage {
 			loader.dismissAll()
 			this.list = data.ativos;
 		});
+	}
+	openRegra(text) {
+		this.alertCtrl.create({title:'Regras.', subTitle:text,
+				buttons: ['Ok, Entendi!']
+			})
+			.present();
 	}
 	openGame(id:number) {
 		if(localStorage.userID) {

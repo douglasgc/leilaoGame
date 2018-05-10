@@ -18,7 +18,7 @@ export class MyApp {
     this.initializeApp();
 
     let modal = this.modalCtrl.create(ModalPage);
-
+    localStorage.saldo = '00,00';
     modal.onDidDismiss(data => {
       this.rootPage = GamePage;
     });
