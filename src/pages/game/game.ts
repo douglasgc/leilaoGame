@@ -19,6 +19,9 @@ export class GamePage {
   constructor(public navCtrl: NavController) {
 
   }
+  logged() {
+  	return localStorage.nome;
+  }
   reOpenVideo() {
   	localStorage.removeItem('openVideo');
   	location.reload();

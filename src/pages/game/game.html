@@ -5,7 +5,7 @@
     </ion-toolbar>
   </ion-header>
   <ion-content>
-    <ion-list>
+    <ion-list *ngIf="logged()">
       <ion-item class="btn-menu">
         <ion-thumbnail style="max-width: 40px!important;min-width: 40px;border-radius: 20px; background:url(https://scontent.fbfh1-2.fna.fbcdn.net/v/t31.0-8/20729078_1556885667706439_231851558754113945_o.jpg?_nc_cat=0&oh=fc782a7ba0b28920a184c84924647ef3&oe=5B6ABF23);max-height: 40px;min-height: 40px;" item-start>
           <span style="
@@ -26,7 +26,7 @@
     </ion-list>
     <div style="padding: 15px; padding-top: 0px; padding-bottom: 0px;">
     	
-      <button [navPush]="planos" ion-button round full color="dark">
+      <button *ngIf="logged()" [navPush]="planos" ion-button round full color="dark">
         <ion-icon name="usd"></ion-icon>
         Comprar Crédito
       </button>

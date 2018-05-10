@@ -48,7 +48,7 @@ export class ModalPage {
     }
     setTimeout(()=>{
     let aud:any = document.querySelector("video");
-    console.log(aud);
+    if(!aud)  {return;}
     aud.onended = () => {this.endVideo()};
     },5000)
   }
