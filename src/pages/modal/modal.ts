@@ -21,7 +21,7 @@ import { ViewController } from 'ionic-angular';
   <ion-slide *ngIf="!localStorage.openVideo">
   
   <video autoplay width="100%" controls>
-    <source src="assets/video/video.mp4" type="video/mp4">
+    <source src="/assets/video/video.mp4" type="video/mp4">
   </video>
 
   </ion-slide >
@@ -40,8 +40,11 @@ export class ModalPage {
     ) {
   }
   ngOnInit() {
+    if(localStorage.openVideo){
+      return;
+    }
     setInterval(()=>{
-    let aud = document.querySelector("video");
+    let aud:any = document.querySelector("video");
     console.log(aud);
     aud.onended = () => this.endVideo();
     },5000)
