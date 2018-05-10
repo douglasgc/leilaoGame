@@ -24,7 +24,10 @@ export class GamePage {
   	location.reload();
   }
   substr() {
-  	return localStorage.nome.substr(0, 1);
+  	if(localStorage.nome) {
+  		return localStorage.nome.substr(0, 1);
+
+  	}
   }
   openLink (link:string) {
   	window.open(link, '_system', 'location=yes');
