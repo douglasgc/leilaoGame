@@ -6,7 +6,7 @@ import { interval } from 'rxjs/observable/interval';
 import { PlayerService } from './player.service';
 import { RankingPage } from './../../ranking/ranking';
 import { AlertController } from 'ionic-angular';
-import moment from 'moment';
+// import moment from 'moment';
 
 @Component({
 	selector: 'page-player',

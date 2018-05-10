@@ -1,11 +1,9 @@
-import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform,ModalController} from 'ionic-angular';
+import { Component } from '@angular/core';
+import { Platform,ModalController} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { ListPage } from '../pages/list/list';
 import { GamePage } from '../pages/game/game';
-import { RankingPage } from '../pages/ranking/ranking';
 
 import { ModalPage } from '../pages/modal/modal';
 
