@@ -6,7 +6,7 @@
     <ion-title>
     </ion-title>
      <ion-buttons end>
-      <div style="color: #fff; font-size: 16px;">
+      <div *ngIf="logged()" style="color: #fff; font-size: 16px;">
         Seu saldo  atual é <b>R$ {{localStorage.saldo}}</b>
       </div>
     </ion-buttons>

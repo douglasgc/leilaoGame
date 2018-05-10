@@ -27,10 +27,6 @@ export class LoginPage {
       this.ls.login(this.form.value)
       .subscribe( ( data:any ) => {
         this.loader.dismissAll();
-
-        if(this.form.value.email == 'caio@caionorder.com') {
-          this.navCtrl.push(GamePage);
-        }
         if ( data.status ) {
           console.log(data);
 

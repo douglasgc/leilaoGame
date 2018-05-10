@@ -31,6 +31,9 @@ export class ListGamePage {
 			this.list = data.ativos;
 		});
 	}
+	logged() {
+  	return localStorage.nome;
+  }
 	openRegra(text) {
 		this.alertCtrl.create({title:'Regras.', subTitle:text,
 				buttons: ['Ok, Entendi!']
