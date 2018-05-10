@@ -105,7 +105,7 @@ export class PlayerPage {
 		this.ps
 		.joinRoom({game_id:this.game.id,player_id:localStorage.userID})
 		.subscribe(() => {
-			localStorage[this.game.id] = true;
+			localStorage[this.game.id] = 'true';
 			this.join = true;
 			this.alertCtrl
 			.create({title:'Parabéns, você entrou na partida.', subTitle:'Por favor aguarde o jogo começar.',
