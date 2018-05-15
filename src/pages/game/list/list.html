@@ -26,7 +26,7 @@
     <h2 color="secondary" style="font-weight: bold">{{item.Game.title}}</h2>
     <h5 style="padding-top: 4px;"><b>R$ {{item.Game.minvalor}}</b></h5>
     <p *ngIf="item.Game.id==90"><b>Etapa 1</b> - R$ 1,20</p>
-    <div item-end>
+    <div style="margin:3px!important" item-end>
       <button style="margin: 0px 10px;font-size: 13px;font-weight: bold;" (click)="openGame(item.Game.id)" color="primary" item-end ion-button round>Jogar Agora</button>
       <br>
       <button (click)="openRegra(item.Game.regras)" style="float: right;margin: 15px 15px;" color="primary" item-end ion-button round>REGRAS</button>

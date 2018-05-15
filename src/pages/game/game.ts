@@ -33,7 +33,8 @@ export class GamePage {
   	}
   }
   openLink (link:string) {
-  	window.open(link, '_system', 'location=yes');
+    console.log('Clicou')
+  	// this.InAppBrowser.open(link, '_system', 'location=yes');
   }
 
 }
