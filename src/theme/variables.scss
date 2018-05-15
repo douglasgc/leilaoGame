@@ -95,11 +95,9 @@ nav#menuresponsivo #rede-sociais a .fa {
 }
 
 .toolbar-background-ios{
-    background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
-    background: -o-linear-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
-    background: -moz-linear-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
-    background: linear-gradient(to left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM)!important;
-    background-repeat: repeat-x;
+    background-image: url(../../assets/img/bg-hme.png) !important;
+    background-position-y: 450px!important;
+    background-size: cover!important;
 }
 $colors: (
   primary:    #e11941,

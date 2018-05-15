@@ -14,7 +14,7 @@
 	<ion-card style="box-shadow: 0px 0px 0px 0px;">
 
 		<ion-card-header >
-			<h2 style="font-weight: bold; color:#e11941; text-align: center; font-size: 23px;margin-bottom: 0px; padding-bottom: 0px!important;">{{game?.title}}</h2>
+			<h2 style="font-weight: bold; color:#e11941; font-weight: 700; text-align: center; font-size: 23px;margin-bottom: 0px; padding-bottom: 0px!important;"><b>{{game?.title}}</b></h2>
 		</ion-card-header>
 
 		<ion-card-content>
@@ -38,7 +38,7 @@
 
 	</ion-card>
 	<div padding *ngIf="game?.status==1 && join==false" style="text-align: center;">
-		<h2 style="color: #333;"><b>Deseja entrar na partida?</b></h2>
+		<h2 style="color: #333;"><b style="font-weight: 700;color: #e1183d;">Deseja entrar na partida?</b></h2>
 		<button (click)="joinRoom()" round ion-button>
 			Entrar na partida
 		</button>

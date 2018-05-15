@@ -3,7 +3,9 @@ import { Platform,ModalController} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { ListPage } from '../pages/list/list';
 import { GamePage } from '../pages/game/game';
+
 
 import { ModalPage } from '../pages/modal/modal';
 
@@ -19,8 +21,12 @@ export class MyApp {
 
     let modal = this.modalCtrl.create(ModalPage);
     localStorage.saldo = '00,00';
-    modal.onDidDismiss(data => {
+    modal.onDidDismiss(data => { 
+      if( !localStorage.nome ) { 
+      this.rootPage = ListPage;
+    }else {
       this.rootPage = GamePage;
+    }
     });
     modal.present();
 
