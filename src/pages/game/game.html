@@ -46,27 +46,37 @@
       <ion-icon name="book"></ion-icon> REGRAS DO JOGO
     </button>
     <button [navPush]="institucionalPage" [navParams]="{id:3}" icon-left ion-item class="btn-menu">
-      <ion-icon name="call"></ion-icon> FALE CONOSCO
+      <ion-icon name="at"></ion-icon> FALE CONOSCO
     </button>
     <button [navPush]="institucionalPage" [navParams]="{id:2}" icon-left ion-item class="btn-menu">
       <ion-icon name="code-working"></ion-icon> DESENVOLVEDORES
     </button>
     <button (click)="reOpenVideo()" icon-left ion-item class="btn-menu">
-      <ion-icon name="videocam"></ion-icon> VÍDEO TUTORIAL
+      <ion-icon name="videocam"></ion-icon> VÍDEO
     </button>
 
 
     <div style="padding: 10px 15px;">
-      <button (click)="openLink('http://fastclickapp.com.br')" ion-button round full color="secondary">
+      <!-- <button (click)="openLink('http://fastclickapp.com.br')" ion-button round full color="secondary">
       	Entrar no Site
-      </button>
+      </button> -->
+      <a href="http://fastclickapp.com.br/" target="_blank" ion-button round full color="secondary">Entrar no Site</a>
     </div>	
-    <button (click)="openLink('https://www.instagram.com/fastclickapp/')" icon-left ion-item class="btn-menu">
+    
+    <a href="https://www.instagram.com/fastclickapp/" target="_blank" icon-left ion-item class="btn-menu">
+      <ion-icon name="logo-instagram"></ion-icon> @fastclick
+    </a>
+
+    <a href="https://www.facebook.com/fastclickapp" target="_blank" icon-left ion-item class="btn-menu">
+      <ion-icon name="logo-facebook"></ion-icon> /fastclick
+    </a>
+
+    <!-- <button (click)="openLink('https://www.instagram.com/fastclickapp/')" icon-left ion-item class="btn-menu">
       <ion-icon name="logo-instagram"></ion-icon> @fastclick
     </button>
     <button (click)="openLink('https://www.facebook.com/fastclickapp')" icon-left ion-item class="btn-menu">
       <ion-icon name="logo-facebook"></ion-icon> /fastclick
-    </button>
+    </button> -->
   </ion-list>
 </ion-content>
 </ion-menu>
