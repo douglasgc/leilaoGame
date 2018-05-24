@@ -6,7 +6,7 @@
   <div padding>
   	<button [navPush]="cadastro" ion-button round color="secondary" full>Quero Participar</button>
     <button [navPush]="login" ion-button round color="secondary" full>Já sou Cadastrado</button>
-    <button ion-button round color="facebook" full>Entrar com o Facebook</button>
+    <button (click)="loginFacebook()" ion-button round color="facebook" full>Entrar com o Facebook</button>
   </div>
 
 

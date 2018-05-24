@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { CadastroPage } from '../pages/cadastro/cadastro';
+import { Facebook } from '@ionic-native/facebook';
 
 import { PlanosPage } from '../pages/planos/planos';
 import { ModalPage } from '../pages/modal/modal';
@@ -76,6 +77,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CadastroService,
     PagamentoService,
     PlayerService,
+    Facebook,
     ListService,
     LoginService,
     SplashScreen,

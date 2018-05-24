@@ -78,4 +78,8 @@
     </platform>
     <engine name="android" spec="7.0.0" />
     <allow-navigation href="http://192.168.25.36:8100" />
+    <plugin name="cordova-plugin-facebook4" spec="^2.1.0">
+        <variable name="APP_ID" value="205335910265620" />
+        <variable name="APP_NAME" value="fast-click" />
+    </plugin>
 </widget>
